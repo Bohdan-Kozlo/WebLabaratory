@@ -1,0 +1,32 @@
+body {
+    font-family: Rubik, serif;
+    background: #FEF8F5;
+}
+
+.container {
+    max-width: 1285px;
+    margin: 0 auto;
+    padding-left: 40px;
+}
+
+.footer {
+    width: 1400px;
+    height: 200px;
+}
+
+
+a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+li {
+    display: block;
+}
+
+button {
+    background: #EE4D47;
+    border-radius: 5px;
+    font-family: Rubik, serif;
+    border: 0;
+}
