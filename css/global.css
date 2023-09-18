@@ -29,4 +29,11 @@ button {
     border-radius: 5px;
     font-family: Rubik, serif;
     border: 0;
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+
+button:hover {
+    background-color: #f60d05;
+
 }

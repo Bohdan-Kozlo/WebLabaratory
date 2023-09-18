@@ -20,8 +20,25 @@
     margin-left: 20px;
 }
 
-.hero__car-image {
+.hero__car {
     position: relative;
     margin-top: 35px;
     right: 400px;
+}
+
+.hero__car-image {
+    animation: moveImg 2s linear;
+    
+}
+
+@keyframes moveImg {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(300px);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
