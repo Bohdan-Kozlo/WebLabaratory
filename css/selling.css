@@ -67,3 +67,11 @@
     left: 60px;
     top: 1790px;
 }
+
+@media screen and (max-width: 1200px){
+    .about-us-img {
+        position: absolute;
+        left: 600px;
+        top: 1200px;
+    }
+}

@@ -1,11 +1,21 @@
 .hero {
     background: url("../images/Background-Scene.svg") no-repeat 20px -70px;
+    background-size: cover;
 }
 
 .hero__inner-title {
     color: #FFF;
     font-family: DM Serif Display, serif;
     font-size: 100px;
+}
+
+@media screen and (max-width: 1250px){
+    .hero {
+        background: url("../images/Background-Scene.svg") no-repeat -55px -70px;
+        background-size: cover;
+
+    }
+
 }
 
 .hero__inner-button {

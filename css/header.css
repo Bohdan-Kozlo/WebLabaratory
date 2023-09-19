@@ -31,3 +31,23 @@
     color: #FFF;
     font-size: 16px;
 }
+
+@media screen and (max-width: 1124px){
+    .header {
+        padding-top: 30px;
+    }
+
+    .header__nav-item {
+        padding-right: 50px;
+    }
+
+    .header_nav-button {
+
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .header__nav {
+        padding-left: 90px;
+    }
+}
