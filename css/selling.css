@@ -74,4 +74,50 @@
         left: 600px;
         top: 1200px;
     }
+
+    .how-to-apply__img {
+        left: -95px;
+        top: 1680px;
+    }
+
+    .how-to-apply_text {
+        line-height: 30px;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .about-us-img {
+        position: absolute;
+        left: 500px;
+        top: 1150px;
+    }
+
+    .how-to-apply__img {
+        width: 500px;
+        height: 550px;
+        left: -30px;
+    }
+
+    .selling__container_about-us {
+        margin-top: 70px;
+        padding-left: 0;
+    }
+
+    .selling__container__how-to-apply {
+        margin-left: 450px;
+        margin-top: 150px;
+    }
+
+    .about-us-img {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 935px){
+    .about-us-img {
+
+
+    }
+
 }

@@ -13,10 +13,10 @@
     .hero {
         background: url("../images/Background-Scene.svg") no-repeat -55px -70px;
         background-size: cover;
-
     }
-
 }
+
+
 
 .hero__inner-button {
     width: 220px;
