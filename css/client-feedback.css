@@ -28,12 +28,15 @@
     margin-left: 20px;
     border-radius: 10px;
     background: #FFF;
+    transition: border 0.2s;
+}
+
+.client-feedback__container-item:hover {
+    border: 2px solid #EE4D47;
 }
 
 .client-feedback__container-item-text {
-    width: 320px;
-    height: 140px;
-    padding-left: 50px;
+    padding-left: 30px;
     padding-top: 60px;
     color: #402B2B;
     font-size: 16px;
@@ -55,3 +58,50 @@
     margin-top: 40px;
     font-weight: 700;
 }
+
+@media screen and (max-width: 340px){
+    .client-feedback__container {
+        margin-top: 65px;
+    }
+
+    .client-feedback-title {
+        margin-top: 15px;
+        font-size: 20px;
+    }
+
+    .client-feedback-wrapper-title {
+        font-size: 35px;
+    }
+
+    .client-feedback__container-items {
+        display: block;
+    }
+
+    .client-feedback__container-item {
+        width: 290px;
+        height: 200px;
+    }
+
+    .client-feedback__container-item-text {
+        font-size: 13px;
+        padding: 0 0 0 5px;
+        text-align: left;
+    }
+
+    .client-feedback__container-item-img {
+        position: relative;
+        margin:  0 10px 50px;
+    }
+
+    .client-feedback__container-item-name {
+        font-weight: 450;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .client-feedback__container-items {
+        margin-left: 250px;
+    }
+}
+

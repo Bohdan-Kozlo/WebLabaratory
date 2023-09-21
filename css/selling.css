@@ -9,6 +9,7 @@
 }
 
 .about-us__text {
+    width: 500px;
     padding-top: 40px;
     color: #402B2B;
     font-size: 18px;
@@ -35,7 +36,6 @@
 
 .about-us__container-text {
     color: #402B2B;
-    font-size: 24px;
     margin: 10px auto;
 }
 
@@ -68,56 +68,77 @@
     top: 1790px;
 }
 
-@media screen and (max-width: 1200px){
-    .about-us-img {
-        position: absolute;
-        left: 600px;
-        top: 1200px;
-    }
-
-    .how-to-apply__img {
-        left: -95px;
-        top: 1680px;
-    }
-
-    .how-to-apply_text {
-        line-height: 30px;
-    }
-}
-
-@media screen and (max-width: 1020px) {
-    .about-us-img {
-        position: absolute;
-        left: 500px;
-        top: 1150px;
-    }
-
-    .how-to-apply__img {
-        width: 500px;
-        height: 550px;
-        left: -30px;
-    }
-
+@media screen and (max-width: 340px) {
     .selling__container_about-us {
-        margin-top: 70px;
-        padding-left: 0;
+        padding: 10px;
+        margin: 65px 0 0;
+
+    }
+
+    .about-us__title {
+        font-size: 20px;
+    }
+
+    .about-us__text {
+        padding-top: 10px;
+        line-height: 30px;
+        width: auto;
+
+    }
+
+    .about-us__container {
+        width: 235px;
+        height: 80px;
+        font-size: 16px;
+        margin-top: 40px;
+    }
+
+    .about-us__container-text {
+        margin-left: 30px;
+        text-align: left;
+    }
+
+    .about-us-img {
+        display: none;
+    }
+
+    .how-to-apply__img {
+        display: none;
     }
 
     .selling__container__how-to-apply {
-        margin-left: 450px;
-        margin-top: 150px;
+        margin: 50px 0 0;
     }
 
-    .about-us-img {
-        width: 350px;
-        height: 350px;
+    .how-to-apply__title {
+        font-size: 20px;
+    }
+
+    .how-to-apply_text {
+        font-size: 16px;
+        line-height: 25px;
     }
 }
 
-@media screen and (max-width: 935px){
+@media screen and (min-width: 2000px){
+
     .about-us-img {
-
-
+        left: 1550px;
     }
 
+    .how-to-apply_text {
+        margin-left: 0;
+        margin-bottom: 20px;
+        width: 700px;
+    }
+
+    .how-to-apply__img {
+        left: 400px;
+        top: 1700px;
+    }
+
+
 }
+
+
+

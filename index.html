@@ -16,12 +16,25 @@
     <a href="#">
       <header class="header">
         <div class="header__logo">
-          <img class="header__logo-img" src="images/Rectangle_Logo2.svg" alt="Logo">
-          <img class="header_logo-img" src="images/Rectangle_Logo1.svg" alt="Logo">
+          <img class="header__logo-img1" src="images/Rectangle_Logo2.svg" alt="Logo">
+          <img class="header_logo-img2" src="images/Rectangle_Logo1.svg" alt="Logo">
           <h1 class="header__logo_title">TRAFICO.</h1>
         </div>
-    </a>
-    <nav class="header__nav">
+      </a>
+    <img src="images/menu-icon.svg" alt="Menu-icon" id="header_menu">
+    <div id="menu" class="hidden">
+      <ul>
+        <li class="menu-item"><a href="#">About
+        </a></li>
+        <li class="menu-item"><a href="#">HOW TO
+        </a> </li>
+        <li class="menu-item"><a href="#">FAQS
+        </a></li>
+        <button class="header_nav-button">CONTACT US</button>
+      </ul>
+
+    </div>
+    <nav class="header__nav" onclick="">
       <ul>
         <li class="header__nav-item"><a href="#">ABOUT</a></li>
         <li class="header__nav-item"><a href="#">HOW TO</a></li>
@@ -30,7 +43,7 @@
           <button class="header_nav-button">CONTACT US</button>
         </a></li>
       </ul>
-    </nav>
+      </nav>
     </header>
     <div class="container__hero">
       <div class="hero__inner">
@@ -53,25 +66,25 @@
     <div class="selling__container_about-us">
       <h3 class="about-us__title">ABOUT US</h3>
       <p class="about-us__text">
-        The occupational traffic permit is one of the most <br>
-        important things in the company when carrying out <br>
-        freight transport. In fact, it is a prerequisite for doing <br>
+        The occupational traffic permit is one of the most
+        important things in the company when carrying out
+        freight transport. In fact, it is a prerequisite for doing
         business traffic at all.
       </p>
       <img src="images/Illustration.svg" alt="#" class="about-us-img">
       <div class="about-us__container">
-        <p class="about-us__container-text">How do you do when you need to obtain <br>
-          a commercial traffic permit for freight <br>
+        <p class="about-us__container-text">How do you do when you need to obtain
+          a commercial traffic permit for freight
           transport to your business?</p>
       </div>
     </div>
     <div class="selling__container__how-to-apply">
       <h4 class="how-to-apply__title">How to apply</h4>
       <p class="how-to-apply_text">
-        When applying for a traffic permit, there are certain <br>
-        requirements that you must meet that are included in <br>
-        the examination: requirements for professional <br>
-        knowledge, solid establishment, good reputation <br>
+        When applying for a traffic permit, there are certain
+        requirements that you must meet that are included in
+        the examination: requirements for professional
+        knowledge, solid establishment, good reputation
         and financial resources. Important to remember is to confirm
         your application for a traffic permit by the company's
         company signer or CEO.
@@ -127,17 +140,22 @@
     </div>
   </div>
 </section>
-`
+
 <footer class="footer">
   <p class="footer__copyright">Copyright @ 2023</p>
+  <a href="#">
   <div class="footer__logo">
     <img class="header__logo-img" src="images/Rectangle_Logo2.svg" alt="Logo">
     <img class="logo1" src="images/Rectangle_Logo1.svg" alt="Logo">
     <p class="footer__logo__name">TRAFICO.</p>
   </div>
+  </a>
+  <a href="#">
   <div class="footer__contacts">
     <img src="images/SM.svg" alt="#">
   </div>
+  </a>
 </footer>
+<script src="js.js"></script>
 </body>
 </html>
