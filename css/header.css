@@ -85,10 +85,9 @@
         padding-left: 39px;
     }
 
-
     #header_menu {
         display: block;
-        margin-left: 100px;
+        margin-left: 130px;
     }
 
     #menu.show {
@@ -99,7 +98,6 @@
         width: 100%;
         height: 31%;
         background-color: #F16353;
-
     }
 
     #menu.show li {
@@ -112,6 +110,24 @@
         margin-top: 10px;
         background: #f52d17;
 
+    }
+
+    #header_menu {
+        cursor: pointer;
+    }
+
+    #menu.show {
+        animation: moveHed 0.5s linear;
+    }
+
+    @keyframes moveHed {
+        0%{
+            transform: translateY(-50px);
+        }
+
+        100%{
+            transform: translateY(5px);
+        }
     }
 }
 

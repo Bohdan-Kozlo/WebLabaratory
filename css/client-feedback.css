@@ -79,12 +79,12 @@
 
     .client-feedback__container-item {
         width: 290px;
-        height: 200px;
+        height: 240px;
     }
 
     .client-feedback__container-item-text {
         font-size: 13px;
-        padding: 0 0 0 5px;
+        padding: 15px 15px 0;
         text-align: left;
     }
 
@@ -96,6 +96,20 @@
     .client-feedback__container-item-name {
         font-weight: 450;
         margin-top: 20px;
+    }
+
+    .client-feedback__container-item-name-wrap {
+        margin-left: 110px;
+        margin-bottom: -20px;
+
+        font-weight: 450;
+    }
+
+    .client-feedback__container-item-img-wrap {
+        position: absolute;
+        left: 30px;
+        top: 2070px
+
     }
 }
 
