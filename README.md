@@ -14,6 +14,6 @@
 Посилання на вітку [тут](https://github.com/Bohdan-Kozlo/WebLabaratory/tree/Laba3)
 
 ***
-### Лабораторна робота №3 (Варіант 8)
-Посилання на вітку [тут] (https://github.com/Bohdan-Kozlo/WebLabaratory/tree/Laba4)
+### Лабораторна робота №4 (Варіант 8)
+Посилання на вітку [тут](https://github.com/Bohdan-Kozlo/WebLabaratory/tree/Laba4)
 ***
