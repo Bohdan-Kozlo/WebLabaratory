@@ -1,0 +1,19 @@
+.container {
+    max-width: 1200px;
+}
+
+.container-sm {
+    margin-top: 50px;
+    margin-left: 130px;
+    width: 400px;
+
+}
+
+.row {
+    margin-top: 30px;
+}
+
+.manage {
+    max-width: 300px;
+}
+
