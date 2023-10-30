@@ -1,0 +1,28 @@
+.hero-container {
+    background-image: url('https://www.imf.org/-/media/Images/IMF/News/news-article-images/2020/CF-570x312-Tourism-Preto-perola-Getty-Images-iStock-1011241694.ashx');
+    background-size: cover; /* Заповнюється область фону */
+    background-position: center; /* Центрує зображення по горизонталі та вертикалі */
+    height: 630px; /* Задайте бажаний розмір висоти */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+
+}
+
+.hero-header {
+    margin-top: 100px;
+    color: #fbfbfc;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* Ширина контуру та колір */
+    font-weight: bold;
+}
+
+.hero-benefits {
+    text-align: center;
+    margin-top: 130px;
+}
+
+.hero-imge {
+    width: 50px;
+
+}
