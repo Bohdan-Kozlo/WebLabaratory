@@ -20,3 +20,5 @@
 ### Лабораторна робота №5 (Варіант 8)
 Посилання на вітку [тут](https://github.com/Bohdan-Kozlo/WebLabaratory/tree/Laba5)
 ***
+### Лабораторна робота №6 (Варіант8)
+Посиланняна на вітку [тут](https://github.com/Bohdan-Kozlo/WebLabaratory/tree/Labs6)
