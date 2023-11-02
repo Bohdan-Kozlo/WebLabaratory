@@ -1,0 +1,18 @@
+.footer {
+    background-color: #64eeee; /* Колір
+    color: #fff; /* Колір тексту */
+    padding: 20px 0; /* Внутрішні відступи */
+    height: 150px;
+    margin-top: 70px;
+}
+
+.footer-logo {
+    position: relative;
+    right: -170px;
+    max-width: 80px;
+}
+
+.items-social {
+    width: 25px;
+    margin-left: 30px;
+}
