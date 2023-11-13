@@ -33,4 +33,4 @@
 ### Лабораторна робота №8 (Варіант8)
 Посиланняна на вітку [тут](https://github.com/Bohdan-Kozlo/WebLabaratory/tree/Labs8)
 
-https://github.com/Bohdan-Kozlo/WebLabaratory/tree/Labs8
+
