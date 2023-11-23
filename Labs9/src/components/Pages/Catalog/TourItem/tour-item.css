@@ -1,0 +1,30 @@
+.card {
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 19rem;
+}
+
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-description {
+    font-size: 1.1rem;
+
+}
+
+.card-cost {
+    font-size: 1.2rem;
+}
+
+.card-duration {
+    font-size: 20px;
+
+}
+
+.card-button {
+    margin-top: 10px;
+}

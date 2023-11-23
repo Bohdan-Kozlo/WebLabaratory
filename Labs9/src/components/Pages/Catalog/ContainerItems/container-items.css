@@ -1,0 +1,5 @@
+.container-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Оновлено на 3 колонки */
+    gap: 20px;
+}
