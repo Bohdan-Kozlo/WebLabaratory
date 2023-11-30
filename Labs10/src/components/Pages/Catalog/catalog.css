@@ -1,0 +1,25 @@
+.filter-container {
+    display: flex;
+}
+
+.filter-cost {
+    display: flex;
+    margin-top: 28px;
+    margin-left: 45px;
+}
+
+.filter-cost-input {
+    margin-left: 20px;
+}
+
+.filter-cost-button {
+    margin-left: 20px;
+    margin-top: -5px;
+}
+
+.tour-not-found {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    margin-bottom: 185px;
+}
