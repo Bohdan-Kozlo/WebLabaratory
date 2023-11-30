@@ -34,7 +34,11 @@
 Посиланняна на вітку [тут](https://github.com/Bohdan-Kozlo/WebLabaratory/tree/Labs8)
 
 ***
-### Лабораторна робота №9 (Варіатн8)
+### Лабораторна робота №9 (Варіант8)
 Посилання на вітку [тут](https://github.com/Bohdan-Kozlo/WebLabaratory/tree/laba9)
+
+***
+### Лабораторна робота №10 (Варіант 8)
+Посилання на вітку [тут](https://github.com/Bohdan-Kozlo/WebLabaratory/tree/Laba10)
 
 
