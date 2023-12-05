@@ -45,9 +45,9 @@
 }
 
 
-.card-cost {
+.card-costs {
     margin-top: 40px;
-    margin-left: 120px;
+    margin-left: 60px;
 }
 
 .card-item-duration {
@@ -57,5 +57,26 @@
 
 .card-item-remove {
     margin-top: 35px;
-    margin-left: 250px;
+    margin-left: 150px;
+}
+
+.card-plus-minus {
+    display: flex;
+}
+
+.button-plus {
+    height: 30px;
+    margin-top: 35px;
+    margin-left: 40px;
+}
+
+.button-minus {
+    height: 30px;
+    margin-top: 35px;
+    margin-left: 12px;
+}
+
+.count {
+    margin-top: 37px;
+    margin-left: 1px;
 }
