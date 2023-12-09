@@ -1,67 +1,52 @@
-import {combineReducers} from "redux";
 
-const defaultStateTour = []
+const defaultState = {
+  tourList: []
+};
 
-const defaultStateCost = {
-  count : 1
+const findIndexByName = (arr, name) => {
+  return arr.findIndex((item) => item.name === name);
 }
 
-const defaultAmount = {
-  amount : 0
-}
-
-export const rootReducer = combineReducers({
-  toursReduce: reducerTour,
-  countReduce: totalCountReducer,
-  amountReduce: totalAmountReducer
-})
-
-export function reducerTour(state = defaultStateTour, action) {
+export const reducer = (state = defaultState, action) => {
   switch (action.type) {
     case "ADD_TOUR":
-      if (state.some(tour => tour.toursId === action.payload.toursId)) {
-        return state;
+      const findIndex = findIndexByName(state.tourList, action.payload.name);
+      if (findIndex === -1) {
+        return {...state, tourList: [...state.tourList, action.payload] };
+      } else {
+        const updateTourList = [...state.tourList, action.payload];
+        updateTourList[findIndex] = {
+          ...updateTourList[findIndex],
+          count: updateTourList[findIndex].count + 1
+        };
+        return {...state, tourList: updateTourList};
       }
-      return [...state, action.payload];
     case "REMOVE_TOUR":
-      const updatedState = state.filter(tour => tour.toursId !== action.payload.id);
-      console.log(updatedState)
-      return updatedState;
-
+      const updatedTourList = state.tourList.filter(
+          (tour) => tour.name !== action.payload.name
+      );
+      return { ...state, tourList: updatedTourList };
+    case "INCREMENT_COUNT":
+      return {
+        ...state,
+        tourList: state.tourList.map((tour) => {
+          if (tour.name === action.payload.name) {
+            return {...tour, count: tour.count + 1};
+          }
+          return tour
+        })
+      };
+    case "DECREMENT_COUNT":
+      return {
+        ...state,
+        tourList: state.tourList.map((tour) => {
+          if (tour.name === action.payload.name && tour.count > 0) {
+            return {...tour, count: tour.count - 1};
+          }
+          return tour
+        })
+      }
     default:
       return state;
   }
 }
-
-
-export function totalCountReducer(state = defaultStateCost, action) {
-  switch (action.type) {
-    case "ADD_COUNT":
-      return {...state, count: state.count + action.payload}
-    case "GET_COUNT":
-      return {...state, count: state.count - action.payload}
-    case "ADD_ALL_COUNT":
-      if (isNaN(action.payload)){
-        return {count: 1}
-      }
-      console.log({count: action.payload})
-      return {count: action.payload}
-
-    case "DEFAULT_COUNT":
-      return {count: 0}
-    default:
-      return state
-  }
-}
-
-export function totalAmountReducer(state = defaultAmount, action) {
-  switch (action.type) {
-    case "ADD_AMOUNT":
-      return {...state, amount: state.amount + action.payload }
-    case "GET_AMOUNT":
-      return {...state, amount: state.amount - state.amount}
-    default:
-      return state
-  }
-}
-

@@ -2,21 +2,22 @@ import React, {useEffect, useState} from 'react';
 import {Button, Container} from "react-bootstrap";
 import CardItemsContainer from "./CardItemsContainer/CardItemsContainer";
 import "./card.css"
-import {useDispatch, useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 import {NavLink} from "react-router-dom";
 
+
 const Card = () => {
-    const [tours, setTours] = useState([]);
-    const [amount, setAmount] = useState(0)
-
-    const newAmount = useSelector(state => state.amountReduce.amount)
-    const newTours = useSelector(state => state.toursReduce);
-
+    const tours = useSelector((state) => state.tourList);
+    const [totalCost, setTotalCost] = useState(0);
 
     useEffect(() => {
-      setTours(newTours);
-      setAmount(newAmount)
-    }, [newTours, newAmount]);
+      let totalCost = 0;
+      tours.forEach((tour) => {
+        totalCost += tour.cost * tour.count;
+      });
+      setTotalCost(totalCost)
+    }, [tours]);
+
 
     return (
         <div>
@@ -30,7 +31,7 @@ const Card = () => {
             )}
 
             <div className="total-cost">
-              <h4>Total amount: {amount}</h4>
+              <h4>Total amount: {totalCost}$</h4>
             </div>
             <div className="buttons">
               <NavLink to="/catalog">

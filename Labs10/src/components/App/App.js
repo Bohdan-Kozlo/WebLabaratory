@@ -10,7 +10,12 @@ import {useEffect, useState} from "react";
 import TourService from "../../API/TourService";
 import './App.css'
 import Loading from "../Pages/Catalog/Loading/Loading";
-
+import {persistReducer, persistStore} from "redux-persist";
+import {applyMiddleware, createStore} from "redux";
+import storage from 'redux-persist/lib/storage';
+import {Provider} from "react-redux";
+import {PersistGate} from "redux-persist/integration/react";
+import {reducer} from "../../Redux/reducers";
 
 function App() {
   const [tours, setTours] = useState([]);
@@ -34,8 +39,22 @@ function App() {
     setTours(tours);
   }
 
+  const persistConfig = {
+    key: 'root',
+    storage,
+  };
+
+
+  const persistedReducer = persistReducer(persistConfig, reducer);
+
+
+  const store = createStore(persistedReducer);
+  const persistor = persistStore(store);
+
+
 
   return (
+      <Provider store={store}>
       <div className="App">
         <Header/>
         <Routes>
@@ -47,6 +66,7 @@ function App() {
         </Routes>
         <Footer/>
       </div>
+      </Provider>
   );
 }
 

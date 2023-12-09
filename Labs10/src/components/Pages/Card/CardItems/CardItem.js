@@ -1,39 +1,37 @@
 import React, {useEffect, useState} from 'react';
 import "./card-item.css"
 import {Button} from "react-bootstrap";
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 import {Link} from "react-router-dom";
+import {decrementCount, incrementCount} from "../../../../Redux/action";
 
 const CardItem = (tour) => {
-  const [count, setCount] = useState(useSelector(state => state.countReduce.count));
-  const [amount, setAmount] = useState(tour.cost);
   const dispatch = useDispatch();
+  const [count, setCount] = useState(tour.count);
+  const [amount, setAmount] = useState(tour.cost * tour.count);
 
-  const addCardCount = () => {
-    let newCount= count +1
-    setCount(newCount)
-  }
-
-  const getCardCount = () => {
-    let newCount = count - 1
-    setCount(newCount)
-  }
-
-  const calculationAmount = () => {
-    const payload = tour.cost * count
-    setAmount(payload)
-  }
-
-
-  useEffect(() => {
-    calculationAmount()
-  }, [count]);
-
-  const handleRemoveTour = () => {
-    dispatch({ type: "REMOVE_TOUR", payload: { id: tour.id } });
-    console.log(tour.id)
+  const increment = (name) => {
+    dispatch(incrementCount(name));
+    setCount(count + 1);
   };
 
+  const decrement = (name) => {
+    if (count > 1) {
+      dispatch(decrementCount(name));
+      setCount(count - 1);
+    } else {
+      removeTour(name);
+    }
+  };
+
+  const removeTour = (name) => {
+    dispatch({ type: 'REMOVE_TOUR', payload: { name: name } });
+  };
+
+  useEffect(() => {
+    let amount = tour.cost * count;
+    setAmount(amount);
+  }, [count]);
 
   return (
       <div className="card-item">
@@ -50,19 +48,22 @@ const CardItem = (tour) => {
             <h5>Duration: {tour.duration} Days</h5>
           </div>
           <div className="card-plus-minus">
-            <Button className="button-plus" variant="primary" onClick={addCardCount}>+</Button>
+            <Button className="button-minus" variant="primary" onClick={() => decrement(tour.name)}>
+              -
+            </Button>
             <h5 className="count">{count}</h5>
-            <Button className="button-minus" variant="primary" onClick={getCardCount}>-</Button>
-
+            <Button className="button-plus" variant="primary" onClick={() => increment(tour.name)}>
+              +
+            </Button>
           </div>
           <div className="card-item-remove">
-            <Button variant="danger" onClick={handleRemoveTour}>Remove</Button>
+            <Button variant="danger" onClick={() => removeTour(tour.name)}>
+              Remove
+            </Button>
           </div>
           <div className="card-costs">
             <p>${amount}</p>
-
           </div>
-
         </div>
       </div>
   );
