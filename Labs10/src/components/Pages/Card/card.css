@@ -1,0 +1,19 @@
+.total-cost {
+    margin-left: 900px;
+    margin-top: 60px;
+}
+
+.buttons {
+    margin-top: 60px;
+    display: flex;
+}
+
+.buttons-confirm {
+    margin-left: 1000px;
+}
+
+.tour-is-empty {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
